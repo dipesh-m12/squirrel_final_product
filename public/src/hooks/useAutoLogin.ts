@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/hooks/useAutoLogin.ts
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -33,7 +34,7 @@ const useAutoLogin = (
 
         if (response.status === 200) {
           // Successful auto-login
-          setUserData(response.data.data); // Assuming this is the user data
+          setUserData(response.data.data as any); // Assuming this is the user data
           navigate("/"); // Redirect to home on successful auto-login
         }
       } catch (error) {

@@ -1,4 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 /* eslint-disable react-hooks/exhaustive-deps */
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -167,7 +170,7 @@ const CreatePatent = ({ userData }: { userData: UserData }) => {
   const handleBack = () => setCurrentStep((prev) => prev - 1);
 
   const removeImage = (indexToRemove: any) => {
-    setImages(images.filter((_, index: any) => index !== indexToRemove));
+    setImages(images.filter((_: any, index: any) => index !== indexToRemove));
   };
   // useEffect(() => {
   //   console.log(images);

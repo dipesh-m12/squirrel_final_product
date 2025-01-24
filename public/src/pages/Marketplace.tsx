@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Search, X, Filter, LayoutGrid, List, CarFront } from "lucide-react";
+import { Search, X, Filter, LayoutGrid, List } from "lucide-react";
 import { industries, technologies, transactionTypes } from "@/utils";
 import axios, { AxiosError } from "axios";
 import { patentsRoute } from "@/utils/apiRoutes";

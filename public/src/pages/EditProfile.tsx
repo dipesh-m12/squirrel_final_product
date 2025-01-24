@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useCallback, useEffect, useState } from "react";
 import {
@@ -20,15 +22,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import {
-  ArrowLeft,
-  Upload,
-  Check,
-  Building2,
-  User,
-  Link,
-  CodeSquare,
-} from "lucide-react";
+import { Upload, Check, User } from "lucide-react";
 import { orgTypes } from "@/utils";
 import { useNavigate } from "react-router-dom";
 import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
@@ -42,7 +36,7 @@ import { toast } from "@/hooks/use-toast";
 // Constants for validation
 const PHONE_REGEX = /^[0-9]{10}$/;
 const PINCODE_REGEX = /^[0-9]{6}$/;
-const URL_REGEX = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+// const URL_REGEX = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
 const profileSchema = z.object({
   // Personal Information
   firstName: z

@@ -5,12 +5,10 @@ import axios, { AxiosError } from "axios";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuPortal,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
@@ -31,7 +29,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { auth, profileRoute } from "@/utils/apiRoutes";
+import { profileRoute } from "@/utils/apiRoutes";
 import { userToken } from "@/utils";
 import { toast } from "@/hooks/use-toast";
 import useAuth from "@/hooks/useAuth";
@@ -126,7 +124,7 @@ export const NavBar = ({
   const isAuth = useAuth(false);
   const [deleteLoading, setdeleteLoading] = useState(false);
 
-  const [errors, setErrors] = useState();
+  const [, setErrors] = useState();
   useUserData(setUserData, setErrors);
   const { setTheme } = useTheme();
 

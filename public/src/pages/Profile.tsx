@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import React, { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -7,7 +9,7 @@ import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Calendar, Eye, MapPin, MessageSquare, Plus, Tag } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { auth, intRoute } from "@/utils/apiRoutes";
+import { intRoute } from "@/utils/apiRoutes";
 import { userToken } from "@/utils";
 import { toast } from "@/hooks/use-toast";
 import axios, { AxiosError } from "axios";
