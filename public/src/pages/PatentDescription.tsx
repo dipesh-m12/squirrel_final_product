@@ -47,6 +47,8 @@ function PatentDescription({ userData }: { userData: UserData }) {
 
   async function fetchUserImpressions() {
     try {
+      setLoading(true);
+
       const response = await axios.get(`${intRoute}/all-impressions`, {
         withCredentials: true, // Ensures cookies are sent with the request
       });
@@ -64,6 +66,8 @@ function PatentDescription({ userData }: { userData: UserData }) {
       } else {
         console.error("Error fetching impressions:", error.message);
       }
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -89,7 +93,7 @@ function PatentDescription({ userData }: { userData: UserData }) {
     setIsWishlisted(interactions.wishlist.includes(patentData?.patentId));
     setIsEnquired(interactions.inquiry.includes(patentData?.patentId));
     setIsImpressioned(interactions.impression.includes(patentData?.patentId));
-  }, [userData, patentData]);
+  }, [userData, patentData, interactions]);
 
   const deletePatent = async () => {
     try {
