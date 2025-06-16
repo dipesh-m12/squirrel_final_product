@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Loader2 } from "lucide-react"; // Icons from lucide-react
 import { AxiosError } from "axios";
 import { useToast } from "@/hooks/use-toast";
+import { host } from "@/utils/apiRoutes";
 
 function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -13,6 +14,7 @@ function ForgotPassword() {
   const [timer, setTimer] = useState(30);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -28,16 +30,13 @@ function ForgotPassword() {
     setIsLoading(true); // Show loading spinner
 
     try {
-      const response = await fetch(
-        "http://localhost:5000/api/profile/send-recovery-email",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email }),
-        }
-      );
+      const response = await fetch(`${host}/api/profile/send-recovery-email`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
 
       const result = await response.json();
 
@@ -93,7 +92,7 @@ function ForgotPassword() {
   };
 
   return (
-    <div className="flex  items-center justify-center min-h-[90vh] bg-gray-50 p-4">
+    <div className="flex items-center justify-center min-h-[90vh] bg-gray-50 p-4">
       <div className="w-full max-w-sm">
         <Card className="bg-white shadow-lg rounded-lg">
           <CardHeader>
@@ -125,8 +124,8 @@ function ForgotPassword() {
                 disabled={isCooldown || isLoading}
                 className={`w-full p-3 text-white font-semibold rounded-md transition-colors ${
                   isCooldown || isLoading
-                    ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-primary "
+                    ? "bg-gray-400 dark:bg-gray-600 cursor-not-allowed"
+                    : "bg-primary dark:bg-indigo-600 dark:hover:bg-indigo-500"
                 }`}
               >
                 {isLoading ? (

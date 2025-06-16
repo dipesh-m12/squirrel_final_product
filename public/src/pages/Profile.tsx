@@ -184,14 +184,14 @@ const Profile = ({
                   <Button
                     variant="default"
                     onClick={() => navigate("/editprofile")}
-                    className="w-full bg-slate-900 hover:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="w-full bg-slate-900 hover:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 dark:text-white"
                   >
                     Edit Profile
                   </Button>
                   <Button
                     variant="outline"
                     onClick={handleLogout}
-                    className="w-full border-slate-300 hover:bg-slate-100 shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="w-full border-slate-300 hover:bg-slate-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:text-red-500"
                   >
                     Logout
                   </Button>

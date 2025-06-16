@@ -138,6 +138,7 @@ export const NavBar = ({
         pathname === "/create-patent" ||
         pathname.includes("/description")
       ) {
+        console.log(1);
         navigate("/");
       }
     }

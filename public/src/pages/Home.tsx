@@ -177,7 +177,7 @@ function Home() {
                       <img
                         src={feature.icon}
                         alt={feature.title}
-                        className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+                        className="w-12 h-12 sm:w-16 sm:h-16 object-contain dark:filter dark:invert dark:brightness-0 dark:invert"
                       />
                     </div>
                     <CardTitle className="text-lg sm:text-xl">

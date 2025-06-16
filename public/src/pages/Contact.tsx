@@ -247,7 +247,7 @@ export default function Contact() {
 
                   <Button disabled={loading} type="submit" className="w-full">
                     {loading ? (
-                      <Spinner className="mr-2 border-white" />
+                      <Spinner className="mr-2 border-white dark:border-slate-400" />
                     ) : (
                       "Submit"
                     )}

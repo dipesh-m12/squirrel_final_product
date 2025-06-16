@@ -144,7 +144,9 @@ const About = () => {
                   </div>
                 </div>
                 <CardContent className="p-4 text-center bg-white">
-                  <h3 className="font-semibold text-lg mt-2">{member.name}</h3>
+                  <h3 className="font-semibold text-lg dark:text-gray-400 mt-2">
+                    {member.name}
+                  </h3>
                   <p className="text-muted-foreground">{member.role}</p>
                 </CardContent>
               </Card>
