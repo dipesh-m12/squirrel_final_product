@@ -1,5 +1,5 @@
-export const host = "https://api.squirrelip.com";
-// export const host = "http://localhost:5000";
+// export const host = "https://api.squirrelip.com";
+export const host = "https://squirrel-server-kappa.vercel.app";
 export const auth = `${host}/api/auth`;
 export const patentsRoute = `${host}/api/patent`;
 export const intRoute = `${host}/api/interaction`;
